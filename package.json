@@ -1,0 +1,30 @@
+{
+  "name": "react-use-paginate",
+  "version": "0.0.1",
+  "description": "A simple yet configurable react hook for pagination. Functionally developed.",
+  "main": "./src/index.js",
+  "scripts": {
+    "test": "jest ./src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/albchu/react-use-paginate.git"
+  },
+  "keywords": [
+    "react",
+    "hooks",
+    "es6",
+    "paginate",
+    "paginator",
+    "functional"
+  ],
+  "author": "Albert Chu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/albchu/react-use-paginate/issues"
+  },
+  "homepage": "https://github.com/albchu/react-use-paginate#readme",
+  "dependencies": {
+    "jest": "^26.1.0"
+  }
+}
