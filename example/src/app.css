@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Playfair+Display:wght@500&display=swap");
+:root {
+  --blue: hsla(197, 37%, 24%, 1);
+  --green: hsla(173, 58%, 39%, 1);
+  --yellow: hsla(43, 74%, 66%, 1);
+  --light-yellow: hsla(43, 74%, 76%, 1);
+  --orange: hsla(27, 97%, 60%, 1);
+  --red: hsla(12, 76%, 61%, 1);
+  --main-font: "Playfair Display", serif;
+  --second-font: "Lato", sans-serif;
+}
+
+.app {
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "sidebar main main"
+    "footer footer footer";
+  grid-template-rows: 100px calc(100vh - 110px) 10px;
+  grid-template-columns: 200px auto auto;
+  font-family: var(--second-font);
+}
+
+.app__header {
+  grid-area: header;
+  background-color: var(--blue);
+  padding: 18px 15px;
+}
+
+.app__subtitle {
+  font-size: 1em;
+  color: var(--orange);
+  font-family: var(--second-font);
+}
+
+.app__title {
+  font-family: var(--main-font);
+  color: var(--yellow);
+  font-size: 2em;
+}
+
+.app__sidebar {
+  grid-area: sidebar;
+}
+
+.app__main {
+  background-color: var(--green);
+  grid-area: main;
+  padding: 15px 30px 0px;
+}
+
+.app__sidebar {
+  background-color: var(--blue);
+  color: var(--yellow);
+  padding: 0px 15px;
+}
+
+.app__sidebar_option {
+  font-family: var(--second-font);
+  font-size: 1.1em;
+  padding: 15px 0px;
+  transition: 0.4s all;
+}
+
+.app__sidebar_option:hover {
+  font-size: 1.15em;
+  color: var(--orange);
+  user-select: none;
+  cursor: pointer;
+}
+
+.app__footer {
+  grid-area: footer;
+  background-color: var(--red);
+}

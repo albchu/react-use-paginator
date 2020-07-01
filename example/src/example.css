@@ -1,0 +1,12 @@
+.example__title {
+  font-family: var(--main-font);
+  padding: 20px 0px 15px;
+  font-size: 2em;
+  color: var(--orange);
+  text-shadow: 1px 1px 12px rgba(2, 2, 5, 0.4);
+}
+
+.example__body {
+  text-shadow: 1px 1px 6px rgba(2, 2, 5, 0.2);
+  color: var(--yellow);
+}
