@@ -1,3 +1,7 @@
+.example__container {
+  height: 500px;
+}
+
 .example__title {
   font-family: var(--main-font);
   padding: 20px 0px 15px;

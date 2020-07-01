@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato&family=Playfair+Display:wght@500&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Playfair+Display:wght@500&display=swap');
 :root {
   --blue: hsla(197, 37%, 24%, 1);
   --green: hsla(173, 58%, 39%, 1);
@@ -6,16 +6,16 @@
   --light-yellow: hsla(43, 74%, 76%, 1);
   --orange: hsla(27, 97%, 60%, 1);
   --red: hsla(12, 76%, 61%, 1);
-  --main-font: "Playfair Display", serif;
-  --second-font: "Lato", sans-serif;
+  --main-font: 'Playfair Display', serif;
+  --second-font: 'Lato', sans-serif;
 }
 
 .app {
   display: grid;
   grid-template-areas:
-    "header header header"
-    "sidebar main main"
-    "footer footer footer";
+    'header header header'
+    'sidebar main main'
+    'footer footer footer';
   grid-template-rows: 100px calc(100vh - 110px) 10px;
   grid-template-columns: 200px auto auto;
   font-family: var(--second-font);
@@ -47,6 +47,8 @@
   background-color: var(--green);
   grid-area: main;
   padding: 15px 30px 0px;
+  position: relative;
+  overflow: auto;
 }
 
 .app__sidebar {
@@ -57,13 +59,13 @@
 
 .app__sidebar_option {
   font-family: var(--second-font);
-  font-size: 1.1em;
+  font-size: 0.95em;
   padding: 15px 0px;
   transition: 0.4s all;
 }
 
 .app__sidebar_option:hover {
-  font-size: 1.15em;
+  font-size: 1em;
   color: var(--orange);
   user-select: none;
   cursor: pointer;
