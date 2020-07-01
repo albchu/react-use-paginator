@@ -5,6 +5,7 @@
   "author": "albchu",
   "license": "MIT",
   "repository": "albchu/react-use-paginator",
+  "homepage": "https://albchu.github.io/react-use-paginator",
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
   "source": "src/index.js",
