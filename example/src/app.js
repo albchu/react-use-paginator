@@ -1,11 +1,11 @@
-import React from 'react'
-import './app.css'
-// import { ExampleComponent } from "react-use-paginator";
-import usePaginate from 'react-use-paginator'
-import Example from './example'
+import React from 'react';
+import './app.css';
+import usePaginate from 'react-use-paginator';
+import Example from './example';
 
 const App = () => {
-  const [SimplePage, setSimplePage] = usePaginate()
+  const [SimplePage, setSimplePage] = usePaginate();
+  setSimplePage('nuts');
 
   return (
     <div className='app'>
@@ -25,7 +25,7 @@ const App = () => {
       </div>
       <div className='app__footer' />
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
