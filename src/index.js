@@ -1,1 +1,1 @@
-export { usePaginate as default } from './use-paginate';
+export { usePaginator as default } from './use-paginator';
