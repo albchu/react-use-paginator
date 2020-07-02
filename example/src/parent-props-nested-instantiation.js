@@ -11,7 +11,7 @@ const RenderPage = ({ index, name }) => {
   );
 };
 
-const SideEffectsUsage = () => {
+const ParentPropsInstantiationUsage = () => {
   // const [SimplePage, setSimplePage] = usePaginate(RenderPage);
 
   return (
@@ -19,14 +19,17 @@ const SideEffectsUsage = () => {
       <Example title='Pages with side effects'>
         <div>
           <div>
-            Just as with the simplest usage, the paginator can handle pages that
-            involve side effects
+            As an alternative way to accept parent props in each page component,
+            the rendering component could also be instantiated inside the parent
+            like the following example. This could be considered an anti-pattern
+            for its unconventionalism, but you can definitely do it if your
+            usecase requires it!
           </div>
-          {/* <SimplePage name='elephantt' /> */}
+          <SimplePage name='elephantt' />
         </div>
       </Example>
     </div>
   );
 };
 
-export default SideEffectsUsage;
+export default ParentPropsInstantiationUsage;

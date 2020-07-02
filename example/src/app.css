@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&family=Playfair+Display:wght@500&display=swap');
 :root {
   --blue: hsla(197, 37%, 24%, 1);
-  --green: hsla(173, 58%, 39%, 1);
+  --green: hsla(173, 58%, 35%, 1);
   --yellow: hsla(43, 74%, 66%, 1);
   --light-yellow: hsla(43, 74%, 76%, 1);
-  --orange: hsla(27, 97%, 60%, 1);
+  --orange: hsla(27, 87%, 62%, 1);
   --red: hsla(12, 76%, 61%, 1);
   --main-font: 'Playfair Display', serif;
   --second-font: 'Lato', sans-serif;

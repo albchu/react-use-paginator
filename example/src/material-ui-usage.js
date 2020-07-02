@@ -12,7 +12,7 @@ const RenderPage = ({ index, name }) => {
 };
 
 const MaterialUIUsage = () => {
-  const [SimplePage, setSimplePage] = usePaginate(RenderPage);
+  // const [SimplePage, setSimplePage] = usePaginate(RenderPage);
 
   return (
     <div>
@@ -21,7 +21,7 @@ const MaterialUIUsage = () => {
           <div>
             Completely supports use of Material UI components and JSS styling
           </div>
-          <SimplePage name='elephantt' />
+          {/* <SimplePage name='elephantt' /> */}
         </div>
       </Example>
     </div>

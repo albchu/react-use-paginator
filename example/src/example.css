@@ -10,7 +10,11 @@
   text-shadow: 1px 1px 12px rgba(2, 2, 5, 0.4);
 }
 
-.example__body {
+.example__description {
   text-shadow: 1px 1px 6px rgba(2, 2, 5, 0.2);
   color: var(--yellow);
+}
+
+.example__children {
+  padding: 25px 0px;
 }
