@@ -34,15 +34,15 @@ const App = () => {
         <div className='app__subtitle'>Usage Guide</div>
       </div>
       <div className='app__sidebar'>
-        <div className='app__sidebar_option' onClick={() => setPageIndex(0)}>
+        <div className='app__sidebar_option' onClick={() => setPageIndex(1)}>
           Simple Usage
         </div>
-        {/* <div className='app__sidebar_option' onClick={() => setPageIndex(1)}>
+        <div className='app__sidebar_option' onClick={() => setPageIndex(2)}>
           Pages with side effects
         </div>
-        <div className='app__sidebar_option' onClick={() => setPageIndex(2)}>
+        <div className='app__sidebar_option' onClick={() => setPageIndex(3)}>
           Usage with Material-UI
-        </div> */}
+        </div>
       </div>
       <div className='app__main'>
         <Component />
