@@ -6,7 +6,7 @@ const CodeSandbox = ({ link }) => {
       src={link}
       style={{
         width: '100%',
-        height: 500,
+        height: 600,
         border: 0,
         borderRadius: 4,
         overflow: 'hidden',

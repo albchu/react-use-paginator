@@ -7,9 +7,9 @@ const MaterialUIUsage = () => {
     <div>
       <Example
         title='Usage with Material-UI'
-        description='Completely supports use of Material UI components and JSS styling'
+        description='Completely supports use of Material UI components and JSS styling. Heres an example that fully embraces Material-UI for all components and styling.'
       >
-        //
+        <CodeSandbox link='https://codesandbox.io/embed/usepaginator-material-ui-usage-z7in9?fontsize=14&hidenavigation=1&theme=dark&view=preview' />
       </Example>
     </div>
   );
