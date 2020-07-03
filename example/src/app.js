@@ -4,6 +4,7 @@ import usePaginate from 'react-use-paginator';
 import SimpleUsage from './simple-usage';
 import SideEffectsUsage from './side-effects-usage';
 import MaterialUIUsage from './material-ui-usage';
+import GithubLogo from './github-logo';
 
 const UsageExample = ({ items }) => {
   const Usage = items[0];
@@ -30,8 +31,13 @@ const App = () => {
   return (
     <div className='app'>
       <div className='app__header'>
-        <div className='app__title'>usePaginator</div>
-        <div className='app__subtitle'>Usage Guide</div>
+        <div className='app__header_left'>
+          <div className='app__title'>usePaginator</div>
+          <div className='app__subtitle'>Usage Guide</div>
+        </div>
+        <a href='https://github.com/albchu/react-use-paginator'>
+          <GithubLogo className='app__github' />
+        </a>
       </div>
       <div className='app__sidebar'>
         <div className='app__sidebar_option' onClick={() => setPageIndex(1)}>

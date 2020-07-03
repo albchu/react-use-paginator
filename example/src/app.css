@@ -5,6 +5,7 @@
   --yellow: hsla(43, 74%, 66%, 1);
   --light-yellow: hsla(43, 74%, 76%, 1);
   --orange: hsla(27, 87%, 62%, 1);
+  --dark-orange: hsla(27, 57%, 62%, 1);
   --red: hsla(12, 76%, 61%, 1);
   --main-font: 'Playfair Display', serif;
   --second-font: 'Lato', sans-serif;
@@ -25,6 +26,26 @@
   grid-area: header;
   background-color: var(--blue);
   padding: 18px 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.app__header_left {
+  display: flex;
+  flex-direction: column;
+}
+
+.app__github {
+  height: 60px !important;
+  width: 60px !important;
+  color: var(--dark-orange);
+  transition: 0.8s all;
+  cursor: pointer;
+}
+
+.app__github:hover {
+  color: var(--yellow);
 }
 
 .app__subtitle {
