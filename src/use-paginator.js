@@ -1,11 +1,12 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, useMemo } from 'react';
 import { chunk, getCircularIndex } from './utils';
 
 export const usePaginator = ({ PageComponent, data = [], maxPerPage = 25 }) => {
-  const pageItems = chunk(data, maxPerPage); // TODO: chunk in useMemo. Data could be massive and expensive to recompute per rerender
-  const numPages = pageItems.length;
-
   const [pageIndex, setPageIndex] = useState(0);
+
+  const pageItems = useMemo(() => chunk(data, maxPerPage), [data, maxPerPage]);
+
+  const numPages = pageItems.length;
 
   const nextPage = () =>
     setPageIndex(getCircularIndex(pageIndex + 1, numPages));

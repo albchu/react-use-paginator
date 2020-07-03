@@ -1,6 +1,6 @@
 {
   "name": "react-use-paginator",
-  "version": "0.0.4",
+  "version": "1.0.0",
   "description": "A simple yet configurable react hook for pagination. Functionally developed with hooks.",
   "author": "albchu",
   "license": "MIT",
