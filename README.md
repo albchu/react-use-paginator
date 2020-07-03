@@ -87,7 +87,7 @@ const { ...output } = usePaginator(input);
 | `setPageIndex` | Function signature `(index) => {...}` | Set the page index directly for use cases where you need to traverse directly to certain pages. This "index" value starts at `1` because all pages do as well. **No numbers less than 1 are acceptable**                         |
 | `nextPage`     | Function signature `() => {...}`      | Set the page index directly to the next page. A shortcut to prop into most buttons simply with `onClick={nextPage}`. This function will automatically roll around to page 1 when called on the last page of results.             |
 | `prevPage`     | Function signature `() => {...}`      | Set the page index directly to the previous page. A shortcut to prop into most buttons simply with `onClick={prevPage}`. This function will automatically roll around to the last page when called on the first page of results. |
-| `pageIndex`    | Number                                | The current page index being shown. Starts at `1`.                                                                                                                                                                               |
+| `currentPage`  | Number                                | The current page index being shown. Starts at `1`.                                                                                                                                                                               |
 
 ## License
 
