@@ -47,5 +47,7 @@ export const usePaginator = ({ PageComponent, data = [], maxPerPage = 25 }) => {
     nextPage,
     prevPage,
     currentPage: pageIndex + 1,
+    hasNextPage: pageIndex + 1 < numPages,
+    totalPages: numPages,
   };
 };

@@ -88,6 +88,8 @@ const { ...output } = usePaginator(input);
 | `nextPage`     | Function signature `() => {...}`      | Set the page index directly to the next page. A shortcut to prop into most buttons simply with `onClick={nextPage}`. This function will automatically roll around to page 1 when called on the last page of results.             |
 | `prevPage`     | Function signature `() => {...}`      | Set the page index directly to the previous page. A shortcut to prop into most buttons simply with `onClick={prevPage}`. This function will automatically roll around to the last page when called on the first page of results. |
 | `currentPage`  | Number                                | The current page index being shown. Starts at `1`.                                                                                                                                                                               |
+| `totalPages`   | Number                                | The total number of pages. Essentially this is the ceiling integer value of: `data.length` / `maxPerPage`. But why calculate that yourself when the hook has it available already?                                               |
+| `hasNextPage`  | Boolean                               | Either true or false depending if there is another page to render                                                                                                                                                                |
 
 ## License
 
