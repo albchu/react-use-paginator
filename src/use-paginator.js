@@ -44,6 +44,9 @@ export const usePaginator = ({ PageComponent, data = [], maxPerPage = 25 }) => {
   return {
     Component,
     setPageIndex: setPageIndexExternal,
+    onNextPage: nextPage,
+    onPrevPage: prevPage,
+    pageItems,
     nextPage,
     prevPage,
     currentPage: pageIndex + 1,

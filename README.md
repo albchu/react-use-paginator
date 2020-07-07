@@ -1,8 +1,10 @@
-# react-use-paginator
+# usePaginator React Hook
 
-A simple yet configurable react hook for pagination. Functionally developed with hooks.
+### Declarative Pagination.
 
-`usePaginator` handles the page to page operations performantly with no external dependencies (besides react). This enables development of paginated views quick and painlessly through simple declarative code.
+A simple yet configurable react hook for pagination. No dependencies. Functionally developed.
+
+`usePaginator` allows the rapid development of paginated views that are light and performant. Just as easy as it is to get started, there are also plenty of customization options should you require them.
 
 [![NPM](https://img.shields.io/npm/v/react-use-paginator.svg)](https://www.npmjs.com/package/react-use-paginator) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
@@ -35,7 +37,8 @@ const Page = ({ items, index }) => {
   );
 };
 
-const Paginated = ({ data }) => {
+const App = () => {
+  const data = ['Foo1', 'Bar1', 'Foo2', 'Bar2', 'Foo3', 'Bar3', 'Foo4', 'Bar4'];
   const { Component, nextPage, prevPage } = usePaginator({
     PageComponent: Page,
     maxPerPage: 5,
@@ -44,19 +47,11 @@ const Paginated = ({ data }) => {
 
   return (
     <div>
+      <Button onClick={prevPage}>Prev</Button>
+      <Button onClick={nextPage}>Next</Button>
       <Component />
-      <div>
-        <Button onClick={prevPage}>Prev</Button>
-        <Button onClick={nextPage}>Next</Button>
-      </div>
     </div>
   );
-};
-
-const App = () => {
-  const data = ['Foo1', 'Bar1', 'Foo2', 'Bar2', 'Foo3', 'Bar3', 'Foo4', 'Bar4'];
-
-  return <Paginated data={data} />;
 };
 ```
 
@@ -81,15 +76,16 @@ The output of the hook is an array of values to use in order to render your comp
 const { ...output } = usePaginator(input);
 ```
 
-| Option         | Type                                  | Description                                                                                                                                                                                                                      |
-| -------------- | ------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `Component`    | React Component                       | This is the input `PageComponent` with a specific page's `items` made available through props. Simply render with `<Component />` anywhere on your page.                                                                         |
-| `setPageIndex` | Function signature `(index) => {...}` | Set the page index directly for use cases where you need to traverse directly to certain pages. This "index" value starts at `1` because all pages do as well. **No numbers less than 1 are acceptable**                         |
-| `nextPage`     | Function signature `() => {...}`      | Set the page index directly to the next page. A shortcut to prop into most buttons simply with `onClick={nextPage}`. This function will automatically roll around to page 1 when called on the last page of results.             |
-| `prevPage`     | Function signature `() => {...}`      | Set the page index directly to the previous page. A shortcut to prop into most buttons simply with `onClick={prevPage}`. This function will automatically roll around to the last page when called on the first page of results. |
-| `currentPage`  | Number                                | The current page index being shown. Starts at `1`.                                                                                                                                                                               |
-| `totalPages`   | Number                                | The total number of pages. Essentially this is the ceiling integer value of: `data.length` / `maxPerPage`. But why calculate that yourself when the hook has it available already?                                               |
-| `hasNextPage`  | Boolean                               | Either true or false depending if there is another page to render                                                                                                                                                                |
+| Option                              | Type                                  | Description                                                                                                                                                                                                                      |
+| ----------------------------------- | ------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `currentPage`                       | Number                                | The current page index being shown. Starts at `1`.                                                                                                                                                                               |
+| `Component`                         | React Component                       | This is the input `PageComponent` with a specific page's `items` made available through props. Simply render with `<Component />` anywhere on your page.                                                                         |
+| `hasNextPage`                       | Boolean                               | Either true or false depending if there is another page to render                                                                                                                                                                |
+| `onNextPage` Alias:&nbsp;`nextPage` | Function signature `() => {...}`      | Set the page index directly to the next page. A shortcut to prop into most buttons simply with `onClick={nextPage}`. This function will automatically roll around to page 1 when called on the last page of results.             |
+| `onPrevPage` Alias:&nbsp;`prevPage` | Function signature `() => {...}`      | Set the page index directly to the previous page. A shortcut to prop into most buttons simply with `onClick={prevPage}`. This function will automatically roll around to the last page when called on the first page of results. |
+| `pageItems`                         | Array                                 | The items from the input data currently being rendered                                                                                                                                                                           |
+| `setPageIndex`                      | Function signature `(index) => {...}` | Set the page index directly for use cases where you need to traverse directly to certain pages. This "index" value starts at `1` because all pages do as well. **No numbers less than 1 are acceptable**                         |
+| `totalPages`                        | Number                                | The total number of pages. Essentially this is the ceiling integer value of: `data.length` / `maxPerPage`. But why calculate that yourself when the hook has it available already?                                               |
 
 ## License
 
