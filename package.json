@@ -12,6 +12,19 @@
   "engines": {
     "node": ">=10"
   },
+  "keywords": [
+    "react",
+    "hook",
+    "hooks",
+    "paginate",
+    "paginator",
+    "paginaton",
+    "usePaginate",
+    "usePaginator",
+    "usePagination",
+    "page",
+    "es6"
+  ],
   "scripts": {
     "build": "microbundle-crl --no-compress --format modern,cjs",
     "start": "microbundle-crl watch --no-compress --format modern,cjs",
