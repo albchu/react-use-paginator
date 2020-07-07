@@ -1,6 +1,6 @@
 {
   "name": "react-use-paginator",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "A simple yet configurable react hook for pagination. Functionally developed with hooks.",
   "author": "albchu",
   "license": "MIT",
@@ -12,6 +12,19 @@
   "engines": {
     "node": ">=10"
   },
+  "keywords": [
+    "react",
+    "hook",
+    "hooks",
+    "paginate",
+    "paginator",
+    "paginaton",
+    "usePaginate",
+    "usePaginator",
+    "usePagination",
+    "page",
+    "es6"
+  ],
   "scripts": {
     "build": "microbundle-crl --no-compress --format modern,cjs",
     "start": "microbundle-crl watch --no-compress --format modern,cjs",

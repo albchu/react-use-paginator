@@ -22,7 +22,6 @@ npm install --save react-use-paginator
 
 ```jsx
 import React from 'react';
-
 import usePaginator from 'react-use-paginator';
 
 const Page = ({ items, index }) => {
@@ -89,4 +88,4 @@ const { ...output } = usePaginator(input);
 
 ## License
 
-MIT © [albchu](https://github.com/albchu)
+MIT © [albchu🍍](https://github.com/albchu)
