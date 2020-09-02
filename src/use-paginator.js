@@ -27,18 +27,32 @@ export const usePaginator = ({ PageComponent, data = [], maxPerPage = 25 }) => {
       return;
     }
 
+    if (index > numPages) {
+      console.warn(
+        `The page index has been explicitly set to ${index}. There are only ${numPages} total pages.`,
+      );
+    }
+
     setPageIndex(index - 1);
   };
+
+  const currentItems = useMemo(() => pageItems[pageIndex] || [], [
+    pageItems,
+    pageIndex,
+  ]);
+
+  // Hot take: Array indices start at zero, but page indices start at 1. Please dont @ me
+  const pageIndexExternal = pageIndex + 1;
 
   const Component = useCallback(
     (props) => (
       <PageComponent
         {...props}
-        index={pageIndex + 1} // Hot take: Array indexes start at zero, but pages start at 1. Please dont @ me
-        items={pageItems[pageIndex]}
+        index={pageIndexExternal}
+        items={currentItems}
       />
     ),
-    [pageIndex, pageItems],
+    [pageIndex, PageComponent, currentItems],
   );
 
   return {
@@ -46,11 +60,11 @@ export const usePaginator = ({ PageComponent, data = [], maxPerPage = 25 }) => {
     setPageIndex: setPageIndexExternal,
     onNextPage: nextPage,
     onPrevPage: prevPage,
-    pageItems: pageItems[pageIndex],
+    pageItems: currentItems,
     nextPage,
     prevPage,
-    currentPage: pageIndex + 1,
-    hasNextPage: pageIndex + 1 < numPages,
+    currentPage: pageIndexExternal,
+    hasNextPage: pageIndexExternal < numPages,
     totalPages: numPages,
   };
 };
