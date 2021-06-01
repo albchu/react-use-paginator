@@ -36,10 +36,9 @@ export const usePaginator = ({ PageComponent, data = [], maxPerPage = 25 }) => {
     setPageIndex(index - 1);
   };
 
-  const currentItems = useMemo(() => pageItems[pageIndex] || [], [
-    pageItems,
-    pageIndex,
-  ]);
+  const currentItems = useMemo(() => {
+    return pageItems[pageIndex] || [];
+  }, [pageItems, pageIndex]);
 
   // Hot take: Array indices start at zero, but page indices start at 1. Please dont @ me
   const pageIndexExternal = pageIndex + 1;
